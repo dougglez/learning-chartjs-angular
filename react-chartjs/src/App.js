@@ -14,10 +14,12 @@ class App extends Component {
           </div>
           <div className="nav-container">
             <nav className="nav-bar">
+              <Link className="nav-link" to="https://dougglez.github.io/learning-chartjs/">Home</Link>
               <Link className="nav-link" to="/">Bar Chart</Link>
               <Link className="nav-link" to="line">Line Chart</Link>
               <Link className="nav-link" to="donut" >Doughnut Chart</Link>
               <Link className="nav-link" to="bubble">Bubble Chart</Link>
+              
             </nav>
           </div>
         </div>
