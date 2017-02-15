@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -11,7 +10,6 @@ class App extends Component {
         <div className="App-header">
           <div className="header-logo">
             <h2>Welcome to</h2>
-            <img src={logo} className="App-logo" alt="logo" />
             <h2>Chart.JS</h2>
           </div>
           <div className="nav-container">
