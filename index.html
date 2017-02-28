@@ -1,14 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link href="css/style.css" rel="stylesheet">-->
-  </head>
-  <body>
-     <a href="./react-chartjs/build/index.html" >Learn with React</a>
-     <a href="./angular-chartjs/index.html" >Learn with Angular</a>
+<html lang="en" ng-app="chartExample">
 
-  </body>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="main.css" rel="stylesheet">
+</head>
+
+<body>
+  <section class="header">
+    <nav class="nav-bar">
+      <a class="nav-link" href="https://dougglez.github.io/learning-chartjs/">Home</a>
+      <a class="nav-link" ui-sref="bar">Bar</a>
+      <a class="nav-link" ui-sref="line">Line</a>
+      <a class="nav-link" ui-sref="radar">Radar</a>
+      <a class="nav-link" ui-sref="polar">Polar</a>
+    </nav>
+  </section>
+  <!--<button type="button" ng-click="getRandomChart()">Randomize Chart</button>-->
+  <ui-view></ui-view>
+
+  <!--Script tags-->
+  <!--Angular-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+  <!--Chart.js CDN-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+  <!--My js files-->
+  <script type="text/javascript" src="./app.js"></script>
+  <script type="text/javascript" src="./charts/barCtrl.js"></script>
+  <script type="text/javascript" src="./charts/lineCtrl.js"></script>
+  <!--<script type="text/javascript" src="./charts/homeCtrl.js"></script>-->
+  <script type="text/javascript" src="./charts/polarCtrl.js"></script>
+  <script type="text/javascript" src="./charts/radarCtrl.js"></script>
+
+  <script type="text/javascript" src="./charts/service.js"></script>
+</body>
+
 </html>
