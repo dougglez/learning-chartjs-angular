@@ -1,4 +1,5 @@
 angular.module('chartExample').controller('lineCtrl', function ($scope) {
+  
   var ctx = document.getElementById('lineChart');
   var lineChart = new Chart(ctx, {
     type: 'line',

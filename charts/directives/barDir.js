@@ -1,14 +1,21 @@
-angular.module("chartExample").controller('barCtrl', function ($scope, $http, $timeout) {
+angular.module('chartExample').directive('barDir', function() {
+  return {
+    restrict: 'E',
+    templateUrl: "./charts/directives/barDir.html",
+    // controller: 'dirCtrl',
+    // scope: {
+    //   data: '='
+    // }
+    controller: function($scope) {      
 
-// function data() {
-//   return $http.get('../datafile.js').then((response) => $scope.myData = response)
-// }
+/**
+|--------------------------------------------------
+| Starting barchart code
+|--------------------------------------------------
+*/
 
-
-// $timeout(() => console.log('testing', $scope.myData), 1000);
-
-  let ctx = document.getElementById("barChart");
-  let myChart = new Chart(ctx, {
+let ctxDir = document.getElementById("myChartDir");
+  let myChartDir = new Chart(ctxDir, {
     type: 'bar',
     data: {
       labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "Test1", "Test2"],
@@ -48,32 +55,14 @@ angular.module("chartExample").controller('barCtrl', function ($scope, $http, $t
     }
   }
 });
+console.log(myChartDir);
 
+/**
+|--------------------------------------------------
+| Ending barchart code
+|--------------------------------------------------
+*/
 
-// let ctx2 = document.getElementById("bubbleChart");
-// let myBubbleChart = new Chart(ctx2,{
-//     type: 'bubble',
-//     data: {
-//         datasets: [
-//         {
-//             label: 'First Dataset',
-//             data: [
-//                 {
-//                     x: 20,
-//                     y: 30,
-//                     r: 15
-//                 },
-//                 {
-//                     x: 40,
-//                     y: 10,
-//                     r: 10
-//                 }
-//             ],
-//             backgroundColor:"#FF6384",
-//             hoverBackgroundColor: "#FF6384",
-//         }]
-// }
-    // options: options
-// });
-
+    } 
+  }
 });
