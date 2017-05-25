@@ -32,6 +32,12 @@ angular.module("chartExample", ["ui.router"])
       templateUrl: "./views/polar.html",
       controller: "polarCtrl"
     })
+    $stateProvider
+    .state("bubble", {
+      url: "/bubble",
+      templateUrl: "./views/bubbleChart.html",
+      controller: "bubbleCtrl"
+    })
   });
 
 

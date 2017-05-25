@@ -1,14 +1,10 @@
-angular.module("chartExample").controller('barCtrl', function ($scope, $http, $timeout) {
+angular.module('chartExample')
+  .controller('dirCtrl', function($scope, service) {
 
-// function data() {
-//   return $http.get('../datafile.js').then((response) => $scope.myData = response)
-// }
+console.log('dir Ctrl running')
 
-
-// $timeout(() => console.log('testing', $scope.myData), 1000);
-
-  let ctx = document.getElementById("barChart");
-  let myChart = new Chart(ctx, {
+let ctxDir = document.getElementById("myChartDir");
+  let myChartDir = new Chart(ctxDir, {
     type: 'bar',
     data: {
       labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "Test1", "Test2"],
@@ -45,35 +41,9 @@ angular.module("chartExample").controller('barCtrl', function ($scope, $http, $t
             beginAtZero: true
           }
         }]
+      }
     }
-  }
-});
+  });
 
 
-// let ctx2 = document.getElementById("bubbleChart");
-// let myBubbleChart = new Chart(ctx2,{
-//     type: 'bubble',
-//     data: {
-//         datasets: [
-//         {
-//             label: 'First Dataset',
-//             data: [
-//                 {
-//                     x: 20,
-//                     y: 30,
-//                     r: 15
-//                 },
-//                 {
-//                     x: 40,
-//                     y: 10,
-//                     r: 10
-//                 }
-//             ],
-//             backgroundColor:"#FF6384",
-//             hoverBackgroundColor: "#FF6384",
-//         }]
-// }
-    // options: options
-// });
-
-});
+  })
